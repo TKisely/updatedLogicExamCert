@@ -1,0 +1,14 @@
+//
+// Created by TKisely on 2017. 04. 24..
+//
+
+#ifndef UPDATEDLOGICEXAMCERT_BASE_EVENT_H
+#define UPDATEDLOGICEXAMCERT_BASE_EVENT_H
+
+
+class Base_Event {
+
+};
+
+
+#endif //UPDATEDLOGICEXAMCERT_BASE_EVENT_H

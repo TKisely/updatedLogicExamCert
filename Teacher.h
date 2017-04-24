@@ -1,0 +1,14 @@
+//
+// Created by TKisely on 2017. 04. 24..
+//
+
+#ifndef UPDATEDLOGICEXAMCERT_TEACHER_H
+#define UPDATEDLOGICEXAMCERT_TEACHER_H
+
+
+class Teacher {
+
+};
+
+
+#endif //UPDATEDLOGICEXAMCERT_TEACHER_H

@@ -1,0 +1,14 @@
+//
+// Created by TKisely on 2017. 04. 24..
+//
+
+#ifndef UPDATEDLOGICEXAMCERT_IPRINTABLE_H
+#define UPDATEDLOGICEXAMCERT_IPRINTABLE_H
+
+
+class IPrintable {
+
+};
+
+
+#endif //UPDATEDLOGICEXAMCERT_IPRINTABLE_H
