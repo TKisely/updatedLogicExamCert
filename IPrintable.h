@@ -5,9 +5,16 @@
 #ifndef UPDATEDLOGICEXAMCERT_IPRINTABLE_H
 #define UPDATEDLOGICEXAMCERT_IPRINTABLE_H
 
+#include <string>
+#include <fstream>
+#include <iostream>
+using namespace std;
 
 class IPrintable {
-
+public:
+    virtual string printToString()=0;
+    virtual bool printToFile()=0;
+    virtual bool printToConsole()=0;
 };
 
 

@@ -21,8 +21,10 @@ public:
 
     Place();
     Place(const unsigned&,const string&,const string&,const unsigned&);
-    string toString()const ;
-    void printOut()const;
+    Place(const Place&);
+    string printToString();
+    bool printToFile();
+    bool printToConsole();
 
     bool setZip(const unsigned&);
     bool setCity(const string&);

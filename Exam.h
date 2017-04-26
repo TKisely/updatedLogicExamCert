@@ -7,9 +7,14 @@
 
 
 #include "IPrintable.h"
+#include "Award.h"
+#include "Mark.h"
 
 class Exam: IPrintable {
-
+private:
+    Mark* marks;
+    Award* awards;
+public:
 };
 
 

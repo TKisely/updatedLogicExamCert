@@ -8,10 +8,15 @@
 
 #include "Base_Event.h"
 #include "Exam.h"
+#include "Student.h"
+#include "Teacher.h"
 
 class Exam_Event: Base_Event {
 private:
     Exam* exams;
+    Student* students;
+    Teacher* teachers;
+
 public:
     virtual ~Exam_Event();
     Exam_Event(Exam *exams);

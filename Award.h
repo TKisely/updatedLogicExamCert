@@ -13,13 +13,14 @@ using namespace std;
 
 class Award{
 private:
+    string name;
     string subjectText;
 public:
     Award();
-    Award(const Student&,const string&);
+    Award(const string&,const string&);
 
-    void printOut()const;
-
+    bool setName(const string&);
+    string getName()const;
     bool setText(const string&);
     string getText()const;
 };

@@ -6,8 +6,17 @@
 #define UPDATEDLOGICEXAMCERT_BASE_EVENT_H
 
 
-class Base_Event {
+#include "Date.h"
+#include "Place.h"
 
+class Base_Event {
+private:
+protected:
+    Date when;
+    Place where;
+public:
+    Base_Event();
+    Base_Event(const Date&,const Place&);
 };
 
 
