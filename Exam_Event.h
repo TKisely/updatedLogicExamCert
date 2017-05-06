@@ -25,11 +25,9 @@ private:
 public:
 
     Exam_Event();
-
     ~Exam_Event();
 
     bool addParticipants(const unsigned,const Student&,const unsigned,const Teacher&);
-
     bool createExam(const Student&);
 };
 
