@@ -4,7 +4,7 @@
 
 #include "Person.h"
 
-static unsigned lastID=0; //ID will start from 1
+unsigned Person::lastID=0; //ID will start from 1
 
 Person::Person():ID(lastID++) {
 
@@ -27,7 +27,7 @@ string Person::getLastName() const {
 }
 
 Date Person::getBirthDate() const {
-    return Date();
+    return birthDate;
 }
 
 unsigned int Person::getID() const {
@@ -35,18 +35,18 @@ unsigned int Person::getID() const {
 }
 
 string Person::printToString() const {
-    string ret=getFirstName();
-    ret+='/n';
+    string ret="Name : ";
+    ret+=getFirstName();
+    ret+=' ';
     ret+=getLastName();
-    ret+='/n';
+    ret+='\n';
+    ret+="Date of Birth : ";
+    ret+=getBirthDate().printToString();
     return ret;
 }
 
-bool Person::printToFile() const {
-    return false;
-}
-
 bool Person::printToConsole() const {
+    cout<<printToString()<<'\n';
     return false;
 }
 

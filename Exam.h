@@ -1,7 +1,7 @@
 //
 // Created by TKisely on 2017. 04. 24..
 //
-
+//TODO::Exam header
 #ifndef UPDATEDLOGICEXAMCERT_EXAM_H
 #define UPDATEDLOGICEXAMCERT_EXAM_H
 
@@ -12,11 +12,13 @@
 
 class Exam: IPrintable {
 private:
-    Student s;
-    Mark* marks;
-    Award* awards;
+    Student* owner;
+    Mark** marks;
+    Award** awards;
+
     unsigned nMarks;
     unsigned nAwards;
+
 public:
     Exam(const Student&);
 
@@ -27,10 +29,9 @@ public:
     bool deleteLastMark();
     bool deleteLastAward();
 
-    Student whose()const;
+    Student* whose()const;
 
     string printToString()const;
-    bool printToFile()const;
     bool printToConsole()const;
 };
 

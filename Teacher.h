@@ -6,8 +6,27 @@
 #define UPDATEDLOGICEXAMCERT_TEACHER_H
 
 
-class Teacher {
+#include "Person.h"
 
+class Teacher: public Person {
+private:
+    string subject;
+    string ownClass;
+    unsigned pedID;
+public:
+    Teacher();
+    Teacher(const string &, const string &, const Date &,const string&, const string&, const unsigned);
+    Teacher(const Teacher&);
+
+    bool setPedID(const unsigned);
+    bool setSubject(const string&);
+    bool setOwnClass(const string&);
+
+    unsigned getPedID()const;
+    string getSubject()const;
+    string getOwnClass()const;
+
+    string printToString()const;
 };
 
 

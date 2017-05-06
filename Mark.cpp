@@ -9,7 +9,8 @@ Mark::Mark() {
 }
 
 Mark::Mark(const string &pSubject, const unsigned pNum)
-        :subject(pSubject),num(pNum) {
+        :subject(pSubject){
+    setNum(pNum);
 }
 
 bool Mark::setNum(const unsigned pNum) {
@@ -36,14 +37,11 @@ string Mark::getSubject() const {
 string Mark::printToString() const {
     string ret=getSubject();
     ret+="  ";
-    ret+=getNum();
+    ret+=std::to_string(getNum());
     return ret;
 }
 
-bool Mark::printToFile() const {
-    return false;
-}
-
 bool Mark::printToConsole() const {
-    return false;
+    cout<< printToString() << '\n';
+    return true;
 }

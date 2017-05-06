@@ -29,23 +29,28 @@ string Award::getName() const {
 }
 
 bool Award::setText(const string &pSubject) {
+    if(pSubject.length()<=100){
+        this->subjectText=pSubject;
+        return true;
+    }
     return false;
 }
 
 string Award::getText() const {
-    return std::string();
+    return subjectText;
 }
 
 string Award::printToString() const {
-    return std::string();
-}
-
-bool Award::printToFile() const {
-    return false;
+    string ret;
+    ret+=getName();
+    ret+='\n';
+    ret+=getText();
+    return ret;
 }
 
 bool Award::printToConsole() const {
-    return false;
+    cout<<printToString()<<'\n';
+    return true;
 }
 
 

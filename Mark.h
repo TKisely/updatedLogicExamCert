@@ -25,7 +25,6 @@ public:
     string getSubject()const;
 
     string printToString()const;
-    bool printToFile()const;
     bool printToConsole()const;
 };
 

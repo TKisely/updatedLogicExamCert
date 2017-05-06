@@ -22,7 +22,6 @@ public:
     Award(const Award&);
 
     string printToString()const;
-    bool printToFile()const;
     bool printToConsole()const;
 
     bool setName(const string&);

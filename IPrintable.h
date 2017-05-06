@@ -13,7 +13,6 @@ using namespace std;
 class IPrintable {
 public:
     virtual string printToString()const=0;
-    virtual bool printToFile()const=0;
     virtual bool printToConsole()const=0;
 };
 

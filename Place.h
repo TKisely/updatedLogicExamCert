@@ -24,7 +24,6 @@ public:
     Place(const Place&);
 
     string printToString()const;
-    bool printToFile()const;
     bool printToConsole()const;
 
     bool setZip(const unsigned&);

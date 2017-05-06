@@ -30,7 +30,6 @@ public:
     unsigned getDay()const;
 
     string printToString()const;
-    bool printToFile()const;
     bool printToConsole()const;
 
 };

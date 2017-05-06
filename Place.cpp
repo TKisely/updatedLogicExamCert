@@ -23,18 +23,21 @@ Place::Place(const Place &other){
 }
 
 string Place::printToString()const {
-    return std::string();
-    //TODO: make a string with the zip, city, street and num with linebreaks
+    string ret;
+    ret+="Zip code : ";
+    ret+=std::to_string(getZip());
+    ret+="\nCity : ";
+    ret+=getCity();
+    ret+="\nAddress line : ";
+    ret+=getStreet();
+    ret+=' ';
+    ret+=to_string(getHouseNum());
+    return ret;
 }
 
 bool Place::printToConsole()const {
-    return false;
-    //TODO: print to console the ToString
-}
-
-bool Place::printToFile()const {
-    return false;
-    //TODO: print to file the ToString
+    cout<<printToString()<<'\n';
+    return true;
 }
 
 bool Place::setZip(const unsigned &pZip) {
