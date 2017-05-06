@@ -22,17 +22,17 @@ Place::Place(const Place &other){
     setHouseNum(other.getHouseNum());
 }
 
-string Place::printToString() {
+string Place::printToString()const {
     return std::string();
     //TODO: make a string with the zip, city, street and num with linebreaks
 }
 
-bool Place::printToConsole() {
+bool Place::printToConsole()const {
     return false;
     //TODO: print to console the ToString
 }
 
-bool Place::printToFile() {
+bool Place::printToFile()const {
     return false;
     //TODO: print to file the ToString
 }

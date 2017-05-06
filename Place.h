@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class Place:IPrintable {
+class Place:public IPrintable {
 private:
     unsigned zipCode;
     string city;
@@ -22,9 +22,10 @@ public:
     Place();
     Place(const unsigned&,const string&,const string&,const unsigned&);
     Place(const Place&);
-    string printToString();
-    bool printToFile();
-    bool printToConsole();
+
+    string printToString()const;
+    bool printToFile()const;
+    bool printToConsole()const;
 
     bool setZip(const unsigned&);
     bool setCity(const string&);

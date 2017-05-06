@@ -14,6 +14,19 @@ class Mark: public IPrintable {
 private:
     string subject;
     unsigned num;
+public:
+    Mark();
+    Mark(const string&,const unsigned=1);
+
+    bool setNum(const unsigned);
+    bool setSubject(const string&);
+
+    unsigned getNum()const;
+    string getSubject()const;
+
+    string printToString()const;
+    bool printToFile()const;
+    bool printToConsole()const;
 };
 
 

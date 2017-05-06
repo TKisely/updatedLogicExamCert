@@ -12,7 +12,7 @@
 using namespace std;
 
 
-class Person {
+class Person:public IPrintable {
 private:
 
 protected:
@@ -26,6 +26,9 @@ public:
 
     Person(const string &, const string &, const Date &);
 
+
+    Person(const Person&);
+
     string getFirstName() const;
 
     string getLastName() const;
@@ -33,6 +36,10 @@ public:
     Date getBirthDate() const;
 
     unsigned getID() const;
+
+    string printToString()const;
+    bool printToFile()const;
+    bool printToConsole()const;
 };
 
 

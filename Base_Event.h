@@ -17,6 +17,7 @@ protected:
 public:
     Base_Event();
     Base_Event(const Date&,const Place&);
+    Base_Event(const Base_Event&);
 
     Date When()const;
     Place Where()const;

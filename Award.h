@@ -8,16 +8,22 @@
 
 #include <string>
 #include "Student.h"
+#include "IPrintable.h"
 
 using namespace std;
 
-class Award{
+class Award:public IPrintable{
 private:
     string name;
     string subjectText;
 public:
     Award();
     Award(const string&,const string&);
+    Award(const Award&);
+
+    string printToString()const;
+    bool printToFile()const;
+    bool printToConsole()const;
 
     bool setName(const string&);
     string getName()const;

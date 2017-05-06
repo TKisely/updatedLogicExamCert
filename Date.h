@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class Date :IPrintable{
+class Date :public IPrintable{
 private:
     unsigned year;
     unsigned month;
@@ -19,8 +19,7 @@ private:
 public:
     Date();
     Date(const unsigned,const unsigned=0,const unsigned=0);
-    string toString()const;
-    void printOut()const;
+    string printToString()const;
 
     bool setYear(const unsigned);
     bool setMonth(const unsigned);

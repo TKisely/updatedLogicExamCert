@@ -12,9 +12,9 @@ using namespace std;
 
 class IPrintable {
 public:
-    virtual string printToString()=0;
-    //virtual bool printToFile()=0;
-    //virtual bool printToConsole()=0;
+    virtual string printToString()const=0;
+    virtual bool printToFile()const=0;
+    virtual bool printToConsole()const=0;
 };
 
 
