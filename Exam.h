@@ -12,17 +12,26 @@
 
 class Exam: IPrintable {
 private:
+    Student s;
     Mark* marks;
     Award* awards;
+    unsigned nMarks;
+    unsigned nAwards;
 public:
     Exam(const Student&);
 
-    void addMark();
-    void addAward();
+    void addMark(const string&,unsigned);
+    void addMark(const Mark&);
+    void addAward(const Award&);
 
     bool deleteLastMark();
     bool deleteLastAward();
 
+    Student whose()const;
+
+    string printToString()const;
+    bool printToFile()const;
+    bool printToConsole()const;
 };
 
 

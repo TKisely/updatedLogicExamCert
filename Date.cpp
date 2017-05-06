@@ -5,14 +5,10 @@
 #include "Date.h"
 
 Date::Date() {
-}
 
+}
 Date::Date(const unsigned pYear, const unsigned pMonth, const unsigned pDay) {
     setYear(pYear);setMonth(pMonth);setDay(pDay);
-}
-
-string Date::printToString() const {
-    return std::string();
 }
 
 bool Date::setYear(const unsigned pYear) {
@@ -48,10 +44,23 @@ unsigned Date::getMonth() const {
 }
 
 string Date::getMonthName() const {
+    //TODO:Switch of the months
     string ret;
     return std::string();
 }
 
 unsigned Date::getDay() const {
     return day;
+}
+
+string Date::printToString() const {
+    return std::string();
+}
+
+bool Date::printToFile() const {
+    return false;
+}
+
+bool Date::printToConsole() const {
+    return false;
 }

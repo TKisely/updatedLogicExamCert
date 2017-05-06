@@ -19,7 +19,6 @@ private:
 public:
     Date();
     Date(const unsigned,const unsigned=0,const unsigned=0);
-    string printToString()const;
 
     bool setYear(const unsigned);
     bool setMonth(const unsigned);
@@ -29,6 +28,10 @@ public:
     unsigned getMonth()const;
     string getMonthName()const;
     unsigned getDay()const;
+
+    string printToString()const;
+    bool printToFile()const;
+    bool printToConsole()const;
 
 };
 
