@@ -5,7 +5,6 @@
 #include "Date.h"
 
 Date::Date() {
-
 }
 
 Date::Date(const unsigned pYear, const unsigned pMonth, const unsigned pDay) {
