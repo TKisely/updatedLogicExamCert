@@ -13,11 +13,11 @@ Person::Person(const string &, const string &, const Date &) {
 }
 
 string Person::getFirstName() const {
-    return std::string();
+    return firstName;
 }
 
 string Person::getLastName() const {
-    return std::string();
+    return lastName;
 }
 
 Date Person::getBirthDate() const {
@@ -25,5 +25,5 @@ Date Person::getBirthDate() const {
 }
 
 unsigned int Person::getID() const {
-    return 0;
+    return ID;
 }

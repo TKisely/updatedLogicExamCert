@@ -15,6 +15,14 @@ private:
     Mark* marks;
     Award* awards;
 public:
+    Exam(const Student&);
+
+    void addMark();
+    void addAward();
+
+    bool deleteLastMark();
+    bool deleteLastAward();
+
 };
 
 

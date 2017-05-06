@@ -5,9 +5,15 @@
 #ifndef UPDATEDLOGICEXAMCERT_MARK_H
 #define UPDATEDLOGICEXAMCERT_MARK_H
 
+#include <string>
+#include "IPrintable.h"
 
-class Mark {
+using namespace std;
 
+class Mark: public IPrintable {
+private:
+    string subject;
+    unsigned num;
 };
 
 

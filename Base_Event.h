@@ -12,11 +12,17 @@
 class Base_Event {
 private:
 protected:
-    Date when;
-    Place where;
+    Date dateOfEvent;
+    Place placeOfEvent;
 public:
     Base_Event();
     Base_Event(const Date&,const Place&);
+
+    Date When()const;
+    Place Where()const;
+
+    bool setDate(const Date&);
+    bool setPlace(const Place&);
 };
 
 

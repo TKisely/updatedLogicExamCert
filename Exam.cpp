@@ -3,3 +3,7 @@
 //
 
 #include "Exam.h"
+
+Exam::Exam(const Student& pStudent) {this->marks= nullptr;this->awards= nullptr;}
+
+
