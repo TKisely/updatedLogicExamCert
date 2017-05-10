@@ -125,7 +125,9 @@ int main() {
     for (int i = 0; i <numberOfStudents ; ++i) {
         cout<<"Let's start the final exam of the "<<i+1<<" student:"<<endl;
         exam_event.createExam(exam_event.getTheNextStudent());
-        string examOwner=exam_event.getTheNextStudent().getFirstName();
+
+        string examOwnerName=exam_event.getTheNextStudent().getFirstName();
+        cout<<"The "<<i+1<<". student's name is "<<examOwnerName<<endl;
 
         unsigned howManyMarks=0;
         cout<<"How many awards did she/he get?"<<endl;
@@ -159,7 +161,7 @@ int main() {
             exam_event.getOngoingExam().addAward(a);
         }
 
-        Printer::printToFile(exam_event.getOngoingExam());
+        Printer::printToFile(exam_event.getOngoingExam(),examOwnerName);
 
         exam_event.finishExam();
 

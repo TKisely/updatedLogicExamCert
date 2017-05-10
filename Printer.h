@@ -12,7 +12,7 @@
 //TODO::Printer class which is for Printing in Files
 class Printer {
 public:
-    static void printToFile(const IPrintable&);
+    static void printToFile(const IPrintable&, const string="justPrinted");
     static void printToFile(const IPrintable*, const unsigned);
 };
 

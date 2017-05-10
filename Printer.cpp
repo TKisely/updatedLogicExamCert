@@ -15,10 +15,11 @@ void Printer::printToFile(const IPrintable *pNeedToPrint, const unsigned number)
 
 }
 
-void Printer::printToFile(const IPrintable &pPrintable) {
+
+void Printer::printToFile(const IPrintable &pPrintable, const string pNameOfTheFile) {
     ofstream myFile;
-    myFile.open("justPrinted.txt",ios::out);
+    string fileName=pNameOfTheFile+".txt";
+    myFile.open(fileName,ios::out);
     myFile<<pPrintable.printToString();
     myFile.close();
-
 }
