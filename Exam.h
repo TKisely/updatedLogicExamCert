@@ -10,11 +10,11 @@
 #include "Award.h"
 #include "Mark.h"
 
-class Exam: IPrintable {
+class Exam:public IPrintable {
 private:
     Student* owner;
-    Mark** marks;
-    Award** awards;
+    Mark* marks;
+    Award* awards;
 
     unsigned nMarks;
     unsigned nAwards;

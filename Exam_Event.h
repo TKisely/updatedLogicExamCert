@@ -11,24 +11,32 @@
 #include "Student.h"
 #include "Teacher.h"
 
-class Exam_Event: Base_Event {
+class Exam_Event:public Base_Event {
 private:
-    Exam** exams;
-    Student** students;
-    Teacher** teachers;
+    Exam* exams;
+    Student* students;
+    Teacher* teachers;
 
     unsigned nExams;
     unsigned nStudents;
     unsigned nTeachers;
     unsigned nParticipants;
 
+    static unsigned finishedStudentsNumber;
+
+
 public:
 
     Exam_Event();
     ~Exam_Event();
 
-    bool addParticipants(const unsigned,const Student&,const unsigned,const Teacher&);
+    bool addAStudent(const Student&);
+    bool addATeacher(const Teacher&);
+    bool addTheParticipants(const unsigned,const Student*,const unsigned,const Teacher*);
     bool createExam(const Student&);
+    Student getTheNextStudent()const;
+    Exam getOngoingExam();
+    bool finishExam();
 };
 
 

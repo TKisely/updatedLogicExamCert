@@ -5,9 +5,15 @@
 #ifndef UPDATEDLOGICEXAMCERT_PRINTER_H
 #define UPDATEDLOGICEXAMCERT_PRINTER_H
 
+#include <fstream>
+#include <iostream>
+#include "IPrintable.h"
+
 //TODO::Printer class which is for Printing in Files
 class Printer {
-
+public:
+    static void printToFile(const IPrintable&);
+    static void printToFile(const IPrintable*, const unsigned);
 };
 
 
