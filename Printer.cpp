@@ -1,7 +1,6 @@
 //
 // Created by TKisely on 2017. 04. 24..
 //
-//TODO::Printer Class .cpp
 #include "Printer.h"
 
 void Printer::printToFile(const IPrintable *pNeedToPrint, const unsigned number){

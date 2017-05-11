@@ -12,7 +12,7 @@ int main() {
 
 //Only for test
 
-    Date d(1999,11,10);
+ /*   Date d(1999,11,10);
     Date d2(1965,5,7);
     Date d3(1998,6,12);
     Person pc("Kiss","Ferenc",d);
@@ -21,7 +21,27 @@ int main() {
     Teacher t("Nagy","Ilona",d2,"Math","11/CPSZ",54632589);
     Student s("Olasz","Aurel",d3,15632508,"9/F");
     Place pl(1222,"Budapest","Atya utca",9);
+    Exam e(s);
+    Exam_Event exev;
 
+    exev.addAStudent(s);
+    exev.addATeacher(t);
+    exev.createExam(exev.getTheNextStudent());
+
+    Exam ev(exev.getOngoingExam());
+    ev.addMark(m);
+    ev.printToConsole();
+
+    exev.getOngoingExam().addMark(m);
+    exev.getOngoingExam().printToConsole();
+
+    exev.setOngoingExam(ev);
+    exev.getOngoingExam().printToConsole();
+
+    e.addAward(a);
+    e.addMark(m);
+
+    e.printToConsole();
     a.printToConsole();
     m.printToConsole();
     d.printToConsole();
@@ -29,7 +49,7 @@ int main() {
     t.printToConsole();
     s.printToConsole();
     pl.printToConsole();
-
+*/
 
 
 
@@ -125,6 +145,7 @@ int main() {
     for (int i = 0; i <numberOfStudents ; ++i) {
         cout<<"Let's start the final exam of the "<<i+1<<" student:"<<endl;
         exam_event.createExam(exam_event.getTheNextStudent());
+        Exam tempExam(exam_event.getTheNextStudent());
 
         string examOwnerName=exam_event.getTheNextStudent().getFirstName();
         cout<<"The "<<i+1<<". student's name is "<<examOwnerName<<endl;
@@ -141,8 +162,8 @@ int main() {
 
             cout<<"The mark itself:"<<endl;
             cin>>mark;
-
-            exam_event.getOngoingExam().addMark(subject,mark);
+            Mark m(subject, mark);
+            tempExam.addMark(m);
         }
 
         unsigned howManyAwards=0;
@@ -158,10 +179,12 @@ int main() {
             cin>>text;
 
             Award a(subject,text);
-            exam_event.getOngoingExam().addAward(a);
+            tempExam.addAward(a);
         }
+        exam_event.setOngoingExam(tempExam);
+        exam_event.getOngoingExam().printToConsole();
 
-        Printer::printToFile(exam_event.getOngoingExam(),examOwnerName);
+        //Printer::printToFile(exam_event.getOngoingExam(),examOwnerName);
 
         exam_event.finishExam();
 

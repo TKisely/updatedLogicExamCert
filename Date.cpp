@@ -44,7 +44,6 @@ unsigned Date::getMonth() const {
 }
 
 string Date::getMonthName() const {
-    //TODO:Switch of the months
     string ret;
     switch(getMonth()){
         case 1:ret="January";break;

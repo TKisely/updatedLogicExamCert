@@ -14,8 +14,9 @@ Student::Student(const string &pFirstName, const string &pLastName,
     setStudentID(pStudentID);
 }
 
-Student::Student(const Student &other) {
-//TODO::Student Copy Constructor
+Student::Student(const Student &other)
+        :Person(other),
+        studentID(other.studentID),className(other.className) {
 }
 
 bool Student::setClassName(const string &pClassName) {
@@ -39,8 +40,13 @@ unsigned Student::getStudentID() const {
 }
 
 string Student::printToString() const {
-    //TODO::update Student Print method
-    return Person::printToString();
+    string ret=Person::printToString();
+    ret+="Student ID number: ";
+    ret+=std::to_string(studentID);
+    ret+="\n";
+    ret+="Class: ";
+    ret+=className;
+    return ret;
 }
 
 

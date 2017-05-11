@@ -5,7 +5,6 @@
 #include "Place.h"
 
 Place::Place() {
-    //TODO: define default constructor
 }
 
 Place::Place(const unsigned & pZip, const string &pCity, const string &pStreet, const unsigned &pHouseNum) {

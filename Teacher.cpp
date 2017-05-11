@@ -15,8 +15,8 @@ Teacher::Teacher(const string &pFirstName, const string &pLastName, const Date &
     setSubject(pSubject);
 }
 
-Teacher::Teacher(const Teacher &) {
-
+Teacher::Teacher(const Teacher &other) :Person(other),
+         subject(other.subject),ownClass(other.ownClass),pedID(other.pedID) {
 }
 
 bool Teacher::setPedID(const unsigned pPedID) {
@@ -56,6 +56,13 @@ string Teacher::getOwnClass() const {
 }
 
 string Teacher::printToString() const {
-    //TODO::update Teacher Print method
-    return Person::printToString();
+    string ret=Person::printToString();
+    ret+="Ped ID: ";
+    ret+=std::to_string(pedID);
+    ret+="\n";
+    ret+="Subject: ";
+    ret+=subject;
+    ret+=" || Own class: ";
+    ret+=ownClass;
+    return ret;
 }

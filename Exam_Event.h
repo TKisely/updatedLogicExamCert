@@ -34,6 +34,7 @@ public:
     bool addATeacher(const Teacher&);
     bool addTheParticipants(const unsigned,const Student*,const unsigned,const Teacher*);
     bool createExam(const Student&);
+    bool setOngoingExam(const Exam&);
     Student getTheNextStudent()const;
     Exam getOngoingExam();
     bool finishExam();

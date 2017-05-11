@@ -3,9 +3,7 @@
 //
 
 #include "Award.h"
-//TODO:Award.cpp fulfil
 Award::Award() {
-
 }
 
 Award::Award(const string &pName, const string &pSubject)
@@ -43,7 +41,7 @@ string Award::getText() const {
 string Award::printToString() const {
     string ret;
     ret+=getName();
-    ret+='\n';
+    ret+="  ||  ";
     ret+=getText();
     return ret;
 }

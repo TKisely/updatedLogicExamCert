@@ -27,6 +27,7 @@ public:
     string getOwnClass()const;
 
     string printToString()const;
+
 };
 
 

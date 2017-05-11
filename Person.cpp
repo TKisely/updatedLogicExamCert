@@ -7,7 +7,6 @@
 unsigned Person::lastID=0; //ID will start from 1
 
 Person::Person():ID(lastID++) {
-
 }
 
 Person::Person(const string &pFirstName, const string &pLastName, const Date &pDateOfBirth)

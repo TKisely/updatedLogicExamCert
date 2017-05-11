@@ -1,7 +1,6 @@
 //
 // Created by TKisely on 2017. 04. 24..
 //
-//TODO::Exam_Event class
 #include "Exam_Event.h"
 
 unsigned Exam_Event::finishedStudentsNumber=0;
@@ -73,7 +72,7 @@ bool Exam_Event::addTheParticipants(const unsigned pNumStudents, const Student *
 
 bool Exam_Event::createExam(const Student &pStudent) {
     Exam tempExam(pStudent);
-    Exam *tempExamsList=new[nExams+1];
+    Exam *tempExamsList=new Exam[nExams+1];
     for (int i = 0; i < nExams; ++i) {
         tempExamsList[i]=exams[i];
     }
@@ -95,4 +94,14 @@ Exam Exam_Event::getOngoingExam() {
 bool Exam_Event::finishExam() {
     finishedStudentsNumber++;
     return true;
+}
+
+bool Exam_Event::setOngoingExam(const Exam &pExam) {
+    Exam *temp=new Exam[finishedStudentsNumber+1];
+    for (int i = 0; i < finishedStudentsNumber; ++i) {
+        temp[i]=exams[i];
+    }
+    temp[finishedStudentsNumber]=pExam;
+    if(finishedStudentsNumber!=0)delete[]exams;
+    exams=temp;
 }
