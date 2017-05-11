@@ -130,7 +130,7 @@ int main() {
         cout<<"The "<<i+1<<". student's name is "<<examOwnerName<<endl;
 
         unsigned howManyMarks=0;
-        cout<<"How many awards did she/he get?"<<endl;
+        cout<<"How many marks did she/he get?"<<endl;
         cin>>howManyMarks;
         for (int j = 0; j <howManyMarks ; ++j) {
             unsigned mark;
