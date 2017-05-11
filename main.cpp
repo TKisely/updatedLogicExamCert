@@ -173,10 +173,10 @@ int main() {
             string subject,text;
 
             cout<<"Subject of award:"<<endl;
-            cin>>subject;
+            getline(cin,subject);
 
             cout<<"Text of the award:"<<endl;
-            cin>>text;
+            getline(cin,text);
 
             Award a(subject,text);
             tempExam.addAward(a);
