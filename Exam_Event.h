@@ -37,6 +37,9 @@ public:
     bool setOngoingExam(const Exam&);
     Student getTheNextStudent()const;
     Exam getOngoingExam();
+    unsigned getNumberOfParticipants()const;
+    unsigned getNumberOfTeachers()const;
+    unsigned getNumberOfStudents()const;
     bool finishExam();
 };
 

@@ -58,6 +58,7 @@ int main() {
 //
     Exam_Event exam_event;
 
+
     int numberOfStudents=0;
     cout<<"Please give me the number of the students"<<endl;
     cin>>numberOfStudents;
@@ -187,9 +188,7 @@ int main() {
         Printer::printToFile(exam_event.getOngoingExam(),examOwnerName);
 
         exam_event.finishExam();
-
     }
-
 
 
     cout << "ByeBye, World! I'm finished" << endl;

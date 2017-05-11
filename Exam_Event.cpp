@@ -105,3 +105,15 @@ bool Exam_Event::setOngoingExam(const Exam &pExam) {
     if(finishedStudentsNumber!=0)delete[]exams;
     exams=temp;
 }
+
+unsigned Exam_Event::getNumberOfParticipants() const {
+    return nParticipants;
+}
+
+unsigned Exam_Event::getNumberOfTeachers() const {
+    return nTeachers;
+}
+
+unsigned Exam_Event::getNumberOfStudents() const {
+    return nStudents;
+}
