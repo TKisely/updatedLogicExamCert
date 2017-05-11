@@ -11,20 +11,24 @@ Date::Date(const unsigned pYear, const unsigned pMonth, const unsigned pDay) {
     setYear(pYear);setMonth(pMonth);setDay(pDay);
 }
 
-bool Date::setYear(const unsigned pYear) {
-    if(pYear>=1900){
+void Date::setYear(const unsigned pYear) {
+    try{
+        if(pYear<1900)throw "too old";
         this->year=pYear;
-        return true;
     }
-    return false;
+    catch (string er){
+        cout<<"Error from Date: "<<er;
+    }
 }
 
-bool Date::setMonth(const unsigned pMonth) {
-    if(pMonth>=1&&pMonth<=12){
+void Date::setMonth(const unsigned pMonth) {
+    try{
+        if(!(pMonth>=1&&pMonth<=12))throw "wrong month";
         this->month=pMonth;
-        return true;
     }
-    return false;
+    catch (string er){
+        cout<<"Error from Date: "<<er;
+    }
 }
 
 bool Date::setDay(const unsigned pDay) {

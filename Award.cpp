@@ -14,24 +14,33 @@ Award::Award(const Award &other)
         :name(other.getName()),subjectText(other.getText()) {
 }
 
-bool Award::setName(const string &pName) {
-    if(pName.length()<=20){
+void Award::setName(const string &pName) {
+    try{
+    if(pName.length()>20)throw "too long subject";
         this->name=pName;
-        return true;
     }
-    return false;
+    catch (string er){
+        cout<<"Error from Award: "<<er;
+    }
+
+
+
 }
 
 string Award::getName() const {
     return name;
 }
 
-bool Award::setText(const string &pSubject) {
-    if(pSubject.length()<=100){
+void Award::setText(const string &pSubject) {
+
+    try{
+        if(pSubject.length()>100)throw "too long text";
         this->subjectText=pSubject;
-        return true;
     }
-    return false;
+        catch (string er){
+            cout<<"Error from Award : "<<er;
+        }
+
 }
 
 string Award::getText() const {

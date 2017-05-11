@@ -24,9 +24,9 @@ public:
     string printToString()const;
     bool printToConsole()const;
 
-    bool setName(const string&);
+    void setName(const string&);
     string getName()const;
-    bool setText(const string&);
+    void setText(const string&);
     string getText()const;
 };
 

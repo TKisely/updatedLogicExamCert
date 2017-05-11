@@ -20,8 +20,8 @@ public:
     Date();
     Date(const unsigned,const unsigned=0,const unsigned=0);
 
-    bool setYear(const unsigned);
-    bool setMonth(const unsigned);
+    void setYear(const unsigned);
+    void setMonth(const unsigned);
     bool setDay(const unsigned);
 
     unsigned getYear()const;
