@@ -40,11 +40,10 @@ string Mark::printToString() const {
     string ret=getSubject();
     ret+="  ";
     ret+=std::to_string(getNum());
-    ret+="\n";
     return ret;
 }
 
 bool Mark::printToConsole() const {
-    cout<< printToString();
+    cout<< printToString()<<endl;
     return true;
 }

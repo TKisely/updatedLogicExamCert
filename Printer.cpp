@@ -20,17 +20,12 @@ void Printer::printToFile(const IPrintable &pPrintable, const string pNameOfTheF
     ofstream myFile;
     string fileName=pNameOfTheFile+".txt";
     myFile.open(fileName,ios::out);
-
-    //TODO: Can't new line
-    //myFile<<pPrintable.printToString();
-    //
-
     unsigned size=pPrintable.printToString().length();
     for (int i = 0; i < size; ++i) {
         if(pPrintable.printToString()[i]!='\n'){
             myFile<<pPrintable.printToString()[i];
         } else
-            myFile<<std::endl;
+            myFile<<"\r\n";
     }
     myFile.close();
 }
