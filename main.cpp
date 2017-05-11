@@ -184,7 +184,7 @@ int main() {
         exam_event.setOngoingExam(tempExam);
         exam_event.getOngoingExam().printToConsole();
 
-        //Printer::printToFile(exam_event.getOngoingExam(),examOwnerName);
+        Printer::printToFile(exam_event.getOngoingExam(),examOwnerName);
 
         exam_event.finishExam();
 

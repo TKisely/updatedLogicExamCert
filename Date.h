@@ -22,7 +22,7 @@ public:
 
     void setYear(const unsigned);
     void setMonth(const unsigned);
-    bool setDay(const unsigned);
+    void setDay(const unsigned);
 
     unsigned getYear()const;
     unsigned getMonth()const;

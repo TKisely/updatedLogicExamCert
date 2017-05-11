@@ -1,6 +1,7 @@
 //
 // Created by TKisely on 2017. 04. 24..
 //
+#include <vector>
 #include "Printer.h"
 
 void Printer::printToFile(const IPrintable *pNeedToPrint, const unsigned number){
@@ -19,6 +20,17 @@ void Printer::printToFile(const IPrintable &pPrintable, const string pNameOfTheF
     ofstream myFile;
     string fileName=pNameOfTheFile+".txt";
     myFile.open(fileName,ios::out);
-    myFile<<pPrintable.printToString();
+
+    //TODO: Can't new line
+    //myFile<<pPrintable.printToString();
+    //
+
+    unsigned size=pPrintable.printToString().length();
+    for (int i = 0; i < size; ++i) {
+        if(pPrintable.printToString()[i]!='\n'){
+            myFile<<pPrintable.printToString()[i];
+        } else
+            myFile<<std::endl;
+    }
     myFile.close();
 }

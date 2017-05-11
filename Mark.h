@@ -18,7 +18,7 @@ public:
     Mark();
     Mark(const string&,const unsigned=1);
 
-    bool setNum(const unsigned);
+    void setNum(const unsigned);
     bool setSubject(const string&);
 
     unsigned getNum()const;

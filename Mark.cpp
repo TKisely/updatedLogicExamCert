@@ -13,12 +13,14 @@ Mark::Mark(const string &pSubject, const unsigned pNum)
     setNum(pNum);
 }
 
-bool Mark::setNum(const unsigned pNum) {
-    if(pNum>=1&&pNum<=5){
+void Mark::setNum(const unsigned pNum) {
+    try{
+        if(!(pNum>=1&&pNum<=5))throw"wrong Mark number";
         this->num=pNum;
-        return true;
     }
-    return false;
+    catch(string er){
+        cout<<"Error from Mark: "<<er;
+    }
 }
 
 bool Mark::setSubject(const string &pSubject) {
@@ -38,10 +40,11 @@ string Mark::printToString() const {
     string ret=getSubject();
     ret+="  ";
     ret+=std::to_string(getNum());
+    ret+="\n";
     return ret;
 }
 
 bool Mark::printToConsole() const {
-    cout<< printToString() << '\n';
+    cout<< printToString();
     return true;
 }

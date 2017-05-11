@@ -31,12 +31,14 @@ void Date::setMonth(const unsigned pMonth) {
     }
 }
 
-bool Date::setDay(const unsigned pDay) {
-    if(pDay>=1&&pDay<=31){
+void Date::setDay(const unsigned pDay) {
+    try{
+        if(!(pDay>=1&&pDay<=31))throw "wrong day number";
         this->day=pDay;
-        return true;
     }
-    return false;
+    catch(string er){
+        cout<<"Error from Date: "<<er;
+    }
 }
 
 unsigned Date::getYear() const {
