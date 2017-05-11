@@ -5,7 +5,6 @@
 #ifndef UPDATEDLOGICEXAMCERT_EXAM_EVENT_H
 #define UPDATEDLOGICEXAMCERT_EXAM_EVENT_H
 
-//TODO::Exam_Event header finalize
 #include "Base_Event.h"
 #include "Exam.h"
 #include "Student.h"

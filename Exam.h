@@ -1,7 +1,6 @@
 //
 // Created by TKisely on 2017. 04. 24..
 //
-//TODO::Exam header
 #ifndef UPDATEDLOGICEXAMCERT_EXAM_H
 #define UPDATEDLOGICEXAMCERT_EXAM_H
 
